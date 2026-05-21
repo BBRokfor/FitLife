@@ -3,7 +3,7 @@ water_per_kg = 30
 
 
 # 1. Знакомство
-print("Добрый день!)
+print("Добрый день!")
 user_name = str(input("Как вас зовут? "))
 user_age = int(input("Сколько вам лет? "))
 
