@@ -5,12 +5,19 @@ import constants
 # 1. Знакомство
 print("Добрый день!")
 user_name = str(input("Как вас зовут? "))
-user_age = int(input("Сколько вам лет? "))
+while True:
+    try:
+        user_age = int(input("Сколько вам полных лет? "))
+        break  
+    except ValueError:
+        print("Ошибка! Пожалуйста, введите целое число.")
 
 
 # 2. Сбор данных вес и рост
-user_weight = float(input("Какой вес у вас на сегодня? "))
-user_height = float(input("Какой рост у вас на сегодня? "))
+weight = input("Какой вес у вас на сегодня? ")
+user_weight = float(weight.replace(",", "."))
+height = input("Какой рост у вас на сегодня? ")
+user_height = float(height.replace(",", "."))
 
 # Рассчитай bmi (Индекс массы тела)
 bmi = user_weight / (user_height ** 2)
@@ -18,7 +25,7 @@ bmi = user_weight / (user_height ** 2)
 # Подсчет воды: вес * 30 мл
 # Рассчитай water_needed
 water_ml = user_weight * constants.WATER_PER_KG
-water_l = water_ml / 1000
+water_l = water_ml / constants.ONE_LITER
 
 # 4. Вывод красивого результата
 # Используй f-строку, чтобы вывести приветствие, например: "Привет, Иван!"
