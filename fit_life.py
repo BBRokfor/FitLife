@@ -1,5 +1,5 @@
 # Проект FitLife - MVP версия 1.0
-water_per_kg = 30
+import constants
 
 
 # 1. Знакомство
@@ -17,7 +17,7 @@ bmi = user_weight / (user_height ** 2)
 
 # Подсчет воды: вес * 30 мл
 # Рассчитай water_needed
-water_ml = user_weight * water_per_kg
+water_ml = user_weight * constants.WATER_PER_KG
 water_l = water_ml / 1000
 
 # 4. Вывод красивого результата
