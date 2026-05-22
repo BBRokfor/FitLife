@@ -3,11 +3,11 @@ import constants
 
 # 1. Знакомство
 print("Добрый день!")
-user_name = str(input("Как вас зовут? "))
+user_name = str.title(input("Как вас зовут? "))
 while True:
     try:
         user_age = int(input("Сколько вам полных лет? "))
-        break  
+        break
     except ValueError:
         print("Ошибка! Пожалуйста, введите целое число.")
 
