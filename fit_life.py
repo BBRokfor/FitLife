@@ -1,7 +1,6 @@
 # Проект FitLife - MVP версия 1.0
 import constants
 
-
 # 1. Знакомство
 print("Добрый день!")
 user_name = str(input("Как вас зовут? "))
@@ -11,7 +10,6 @@ while True:
         break  
     except ValueError:
         print("Ошибка! Пожалуйста, введите целое число.")
-
 
 # 2. Сбор данных вес и рост
 weight = input("Какой вес у вас на сегодня? ")
